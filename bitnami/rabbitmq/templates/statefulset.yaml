@@ -174,7 +174,7 @@ spec:
             - name: K8S_ADDRESS_TYPE
               value: {{ .Values.clustering.addressType }}
             - name: RABBITMQ_FEATURE_FLAGS
-              value: {{ .Values.feature_flags }}
+              value: {{ .Values.featureFlags }}
             - name: RABBITMQ_FORCE_BOOT
               value: {{ ternary "yes" "no" .Values.clustering.forceBoot | quote }}
             {{- if (eq "hostname" .Values.clustering.addressType) }}
